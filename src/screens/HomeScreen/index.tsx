@@ -112,10 +112,10 @@ export const HomeScreen = () => {
   return (
     <View style={style.ScreenContainer}>
       <StatusBar backgroundColor={COLORS.primaryBlackHex} />
-      <Header />
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={style.ScrollViewFlex}>
+        <Header />
         <Text style={style.ScreenTitle}>Find the best{'\n'}coffee for you</Text>
         <View style={style.InputContainerComponent}>
           <TouchableOpacity
