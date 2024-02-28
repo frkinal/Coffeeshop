@@ -16,7 +16,10 @@ import {
   OrderHistoryCard,
 } from '@components';
 import style from './style';
-export const OrderHistoryScreen = ({navigation}: any) => {
+import {useNavigation} from '@react-navigation/native';
+import {DetailsNavigationProp} from '@navigators/types';
+export const OrderHistoryScreen = () => {
+  const navigation = useNavigation<DetailsNavigationProp>();
   const OrderHistoryList = useStore((state: any) => state.OrderHistoryList);
   const tabBarHeight = useBottomTabBarHeight();
   const [showAnimation, setShowAnimation] = useState(false);

@@ -5,7 +5,10 @@ import {useBottomTabBarHeight} from '@react-navigation/bottom-tabs';
 import {COLORS} from 'src/theme/theme';
 import {Header, EmptyListAnimation, PaymentFooter, CartItem} from '@components';
 import style from './style';
-export const CartScreen = ({navigation}: any) => {
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@navigators/types';
+export const CartScreen = () => {
+  const navigation = useNavigation<StackNavigationProp>();
   const CartList = useStore((state: any) => state.CartList);
   const CartPrice = useStore((state: any) => state.CartPrice);
   const incrementCartItemQuantity = useStore(

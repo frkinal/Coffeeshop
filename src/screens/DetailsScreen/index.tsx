@@ -11,7 +11,11 @@ import {useStore} from 'src/store/store';
 import {COLORS, FONTSIZE} from 'src/theme/theme';
 import {ImageBackgroundInfo, PaymentFooter} from '@components';
 import style from './style';
-export const DetailsScreen = ({navigation, route}: any) => {
+import {useNavigation, useRoute} from '@react-navigation/native';
+import {CartNavigationProp, DetailsRouteProp} from '@navigators/types';
+export const DetailsScreen = () => {
+  const route = useRoute<DetailsRouteProp>();
+  const navigation = useNavigation<CartNavigationProp>();
   const ItemOfIndex = useStore((state: any) =>
     route?.params?.type == 'Coffee' ? state.CoffeeList : state.BeanList,
   )[route?.params?.index];

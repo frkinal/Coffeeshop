@@ -5,7 +5,10 @@ import {useBottomTabBarHeight} from '@react-navigation/bottom-tabs';
 import {COLORS} from 'src/theme/theme';
 import {Header, EmptyListAnimation, FavoritesItemCard} from '@components';
 import style from './style';
-export const FavoritesScreen = ({navigation}: any) => {
+import {useNavigation} from '@react-navigation/native';
+import {DetailsNavigationProp} from '@navigators/types';
+export const FavoritesScreen = () => {
+  const navigation = useNavigation<DetailsNavigationProp>();
   const FavoritesList = useStore((state: any) => state.FavoritesList);
   const tabBarHeight = useBottomTabBarHeight();
   const addToFavoriteList = useStore((state: any) => state.addToFavoriteList);

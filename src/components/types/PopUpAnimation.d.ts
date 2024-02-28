@@ -1,4 +1,5 @@
+import {ViewStyle} from 'react-native';
 export interface PopUpAnimation {
-  style: any;
+  style: ViewStyle;
   source: any;
 }

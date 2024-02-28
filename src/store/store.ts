@@ -4,6 +4,7 @@ import {persist, createJSONStorage} from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import CoffeeData from '../data/CoffeeData';
 import BeansData from '../data/BeansData';
+import {CartItem} from '@components/types';
 
 export const useStore = create(
   persist(
@@ -14,7 +15,7 @@ export const useStore = create(
       FavoritesList: [],
       CartList: [],
       OrderHistoryList: [],
-      addToCart: (cartItem: any) =>
+      addToCart: (cartItem: CartItem) =>
         set(
           produce(state => {
             let found = false;

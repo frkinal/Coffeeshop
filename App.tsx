@@ -4,7 +4,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TabNavigator from './src/navigators/TabNavigator';
 import {DetailsScreen, PaymentScreen} from '@screens';
 import SplashScreen from 'react-native-splash-screen';
-const Stack = createNativeStackNavigator();
+import {HomeBottomTabParamList} from '@navigators/types';
+const Stack = createNativeStackNavigator<HomeBottomTabParamList>();
 const App = () => {
   useEffect(() => {
     SplashScreen.hide();

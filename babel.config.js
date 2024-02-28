@@ -19,6 +19,7 @@ module.exports = {
           '@assets': './src/assets/index.ts',
           '@screens': './src/screens/index.ts',
           '@navigators': './src/navigators/index.ts',
+          '@navigators/types': './src/navigators/types/index.ts',
           '@theme': './src/theme/theme.ts',
           '@components/types': './src/components/types/index.ts',
         },

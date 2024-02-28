@@ -18,6 +18,8 @@ import {
   CoffeeCard as CoffeeCardProps,
   CoffeeCardActionProps,
 } from '@components/types';
+import {useNavigation} from '@react-navigation/native';
+import {DetailsNavigationProp} from '@navigators/types';
 const getCategoriesFromData = (data: Array<CoffeeCardProps>) => {
   let temp: any = {};
   for (let i = 0; i < data.length; i++) {
@@ -39,7 +41,8 @@ const getCoffeeList = (category: string, data: any) => {
     return coffeelist;
   }
 };
-export const HomeScreen = ({navigation}: any) => {
+export const HomeScreen = () => {
+  const navigation = useNavigation<DetailsNavigationProp>();
   const CoffeeList = useStore((state: any) => state.CoffeeList);
   const BeanList = useStore((state: any) => state.BeanList);
   const addToCart = useStore((state: any) => state.addToCart);
@@ -109,10 +112,10 @@ export const HomeScreen = ({navigation}: any) => {
   return (
     <View style={style.ScreenContainer}>
       <StatusBar backgroundColor={COLORS.primaryBlackHex} />
+      <Header />
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={style.ScrollViewFlex}>
-        <Header />
         <Text style={style.ScreenTitle}>Find the best{'\n'}coffee for you</Text>
         <View style={style.InputContainerComponent}>
           <TouchableOpacity
