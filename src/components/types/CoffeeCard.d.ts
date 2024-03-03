@@ -1,4 +1,4 @@
-import {PricesProps} from '@components/types';
+import {PriceProps, PricesProps} from '@components/types';
 export interface CoffeeCard {
   id: string;
   index: number;
@@ -10,8 +10,8 @@ export interface CoffeeCard {
   description?: string;
   special_ingredient: string;
   average_rating: number;
-  price: any;
-  buttonPressHandler: any;
+  price: PriceProps;
+  buttonPressHandler: (props: CoffeeCardActionProps) => void;
   ingredients?: string;
   ratings_count?: string;
   favorite?: boolean;
@@ -26,4 +26,5 @@ export interface CoffeeCardActionProps {
   special_ingredient: string;
   type: string;
   prices: Array<PricesProps>;
+  price?: PriceProps;
 }

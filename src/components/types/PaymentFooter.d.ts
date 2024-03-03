@@ -4,6 +4,6 @@ interface PriceProps {
 }
 export interface PaymentFooter {
   price: PriceProps;
-  buttonPressHandler: any;
+  buttonPressHandler: () => void;
   buttonTitle: string;
 }

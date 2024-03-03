@@ -2,6 +2,7 @@ import {ImageProps} from 'react-native';
 import {PricesProps} from '@components/types';
 export interface CartItem {
   id: string;
+  index: number;
   name: string;
   imagelink_square: ImageProps;
   special_ingredient: string;

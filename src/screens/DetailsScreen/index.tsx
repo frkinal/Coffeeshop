@@ -13,6 +13,7 @@ import {ImageBackgroundInfo, PaymentFooter} from '@components';
 import style from './style';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {CartNavigationProp, DetailsRouteProp} from '@navigators/types';
+import {CoffeeCardActionProps} from '@components/types';
 export const DetailsScreen = () => {
   const route = useRoute<DetailsRouteProp>();
   const navigation = useNavigation<CartNavigationProp>();
@@ -42,7 +43,7 @@ export const DetailsScreen = () => {
     special_ingredient,
     type,
     price,
-  }: any) => {
+  }: CoffeeCardActionProps) => {
     addToCart({
       id,
       index,
@@ -148,7 +149,7 @@ export const DetailsScreen = () => {
               imagelink_square: ItemOfIndex.imagelink_square,
               special_ingredient: ItemOfIndex.special_ingredient,
               type: ItemOfIndex.type,
-              price: price,
+              prices: price,
             });
           }}
         />

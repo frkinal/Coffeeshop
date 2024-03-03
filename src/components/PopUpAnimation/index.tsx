@@ -7,7 +7,7 @@ export const PopUpAnimation: React.FC<PopUpAnimationProps> = ({
   source,
 }) => {
   return (
-    <View style={style.LottieAnimationContainer}>
+    <View style={style}>
       <LottieView style={style} source={source} autoPlay loop={false} />
     </View>
   );

@@ -1,5 +1,6 @@
 export interface PricesProps {
-  size: string;
+  price: number;
   currency: string;
-  price: string;
+  size: string;
+  quantity: number;
 }

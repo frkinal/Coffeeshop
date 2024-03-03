@@ -7,6 +7,7 @@ import {Header, EmptyListAnimation, PaymentFooter, CartItem} from '@components';
 import style from './style';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@navigators/types';
+import {CartItem as CartItemProps} from '@components/types';
 export const CartScreen = () => {
   const navigation = useNavigation<StackNavigationProp>();
   const CartList = useStore((state: any) => state.CartList);
@@ -43,7 +44,7 @@ export const CartScreen = () => {
               <EmptyListAnimation title={'Cart is Empty'} />
             ) : (
               <View style={style.ListItemContainer}>
-                {CartList.map((data: any) => (
+                {CartList.map((data: CartItemProps) => (
                   <TouchableOpacity
                     onPress={() => {
                       navigation.push('Details', {
@@ -55,6 +56,7 @@ export const CartScreen = () => {
                     key={data.id}>
                     <CartItem
                       id={data.id}
+                      index={data.index}
                       name={data.name}
                       imagelink_square={data.imagelink_square}
                       special_ingredient={data.special_ingredient}

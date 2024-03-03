@@ -1,6 +1,7 @@
+import {ImageSourcePropType} from 'react-native';
 export interface PaymentMethod {
   paymentMode: string;
   name: string;
-  icon: any;
+  icon: ImageSourcePropType;
   isIcon: boolean;
 }

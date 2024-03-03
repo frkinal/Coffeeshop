@@ -2,7 +2,10 @@ import {Text, View, Image} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import {COLORS, FONTSIZE} from 'src/theme/theme';
-import {OrderItemCard as OrderItemCardProps} from '@components/types';
+import {
+  OrderItemCard as OrderItemCardProps,
+  PricesProps,
+} from '@components/types';
 import style from './style';
 export const OrderItemCard: React.FC<OrderItemCardProps> = ({
   type,
@@ -32,7 +35,7 @@ export const OrderItemCard: React.FC<OrderItemCardProps> = ({
           </Text>
         </View>
       </View>
-      {prices.map((data: any, index: any) => (
+      {prices.map((data: PricesProps, index: any) => (
         <View key={index.toString()} style={style.CardTableRow}>
           <View style={style.CardTableRow}>
             <View style={style.SizeBoxLeft}>

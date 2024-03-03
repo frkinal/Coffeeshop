@@ -11,6 +11,6 @@ interface ImageBackgroundInfo {
   average_rating: number;
   ratings_count: string;
   roasted: string;
-  BackHandler?: any;
+  BackHandler?: () => void;
   ToggleFavourite: (favourite: boolean, type: string, id: string) => void;
 }

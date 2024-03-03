@@ -11,4 +11,5 @@ export type {PopUpAnimation} from './PopUpAnimation';
 export type {OrderItemCard} from './OrderItemCard';
 export type {OrderHistoryCard} from './OrderHistoryCard';
 export type {PaymentMethod} from './PaymentMethod';
+export type {PriceProps} from './PriceProps';
 export type {PricesProps} from './PricesProps';
